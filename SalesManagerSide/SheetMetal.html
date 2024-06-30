@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Order</title>
+    <link rel="stylesheet" type="text/css" href="defcss.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <nav>
+            <div class="logo">SMLC Order System</div>
+            <ul class="navbar">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="CreateOrder.html">Create Order</a></li>
+                <li><a href="OrderList.html">Order List</a></li>
+            </ul>
+            <ul class="navbar">
+                <li><a href="Makeuporder.html">Check Out</a></li>
+                <li><a href="Updateinfo.html">Login</a></li>
+            </ul>
+            <button onclick="location.href='AddProduct.html'">Add New Product</button>
+        </nav>
+    </div>
+
+    <div class="container">
+        <h1>Create Order</h1>
+
+        <div class="product-categories">
+            <h2>Product Categories</h2>
+            <div class="category">
+                <h3>Sheet Metal</h3>
+                <div class="products">
+                    <table>
+                        <tr>
+                            <td>
+                                <p>SN:10392</p>
+                                <img src="sample images/A-Sheet Metal/100001.jpg" alt="Sheet Metal 1" width="200"
+                                    height="200" id="sheet_metal_1" price="15">
+                                <select name="sheet_metal_1">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <p>$15.00</p>
+                            </td>
+                            <td>
+                                <P>SN:10295</P>
+                                <img src="sample images/A-Sheet Metal/100002.jpg" alt="Sheet Metal 2" width="200"
+                                    height="200" id="sheet_metal_2" price="5">
+                                <select name="sheet_metal_2">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <p>$5.00</p>
+                            </td>
+                            <td>
+                                <p>SN:10205</p>
+                                <img src="sample images/A-Sheet Metal/100003.jpg" alt="Sheet Metal 3" width="200"
+                                    height="200">
+                                <select name="sheet_metal_3">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <p>$10.00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>SN:10225</p>
+                                <img src="sample images/A-Sheet Metal/100004.jpg" alt="Sheet Metal 4" width="200"
+                                    height="200">
+                                <select name="sheet_metal_4">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <p>$30.00</p>
+                            </td>
+                            <td>
+                                <p>SN:10215</p>
+                                <img src="sample images/A-Sheet Metal/100005.jpg" alt="Sheet Metal 5" width="200"
+                                    height="200">
+                                <select name="sheet_metal_5">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <p>$3.00</p>
+                            </td>
+                            <td>
+                                <!-- 其他商品 -->
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!-- 其他大類 -->
+        </div>
+
+        <div class="cart">
+            <h2>Shopping Cart</h2>
+            <div class="order-summary">
+                <!-- 購物車內容 -->
+            </div>
+            <div class="total">
+                <h3>Total Price:</h3>
+                <p id="total-price">$0.00</p>
+            </div>
+            <button onclick="sumUpOrder()">Sum Up Order</button>
+            <button onclick="location.href='MetalEdit.html'">Edit</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

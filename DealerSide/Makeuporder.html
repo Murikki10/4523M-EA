@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Make Up Order</title>
+<link rel="stylesheet" type="text/css" href="defcss.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <nav>
+          <div class="logo">SMLC Order System</div>
+          <ul class="navbar">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="CreateOrder.html">Create Order</a></li>
+            <li><a href="OrderList.html">Order List</a></li>
+          </ul>
+          <ul class="navbar">
+            <li><a href="Makeuporder.html">Check Out</a></li>
+            <li><a href="Updateinfo.html">Login</a></li>
+          </ul>
+        </nav>
+      </div>
+
+<div class="container">
+  <h1>Make Up Order</h1>
+  
+  <div class="product-categories">
+    <h2>Product Categories</h2>
+    <div class="category">
+      <h3>Sheet Metal</h3>
+      <ul class="products">
+        <li class="product">
+          <span class="name">Spare Part Name 1</span>
+          <span class="price">$10.00</span>
+          <input type="number" name="quantity" value="0" min="0">
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="order-details">
+    <h2>Order Details</h2>
+    <div class="summary">
+      <h3>Order Summary</h3>
+      <p>Total Price: <span id="total-price">$0.00</span></p>
+    </div>
+    <div class="customer-info">
+      <h3>Customer Information</h3>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone" required><br><br>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea><br><br>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
