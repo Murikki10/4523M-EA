@@ -40,14 +40,14 @@ if (isset($_GET['orderID'])) {
             $sql_delete_order = "DELETE FROM orders WHERE orderID = '$orderID'";
             mysqli_query($conn, $sql_delete_order);
 
-            echo "<script>alert('Order deleted successfully'); window.location.href='view_order.php';</script>";
+            echo "<script>alert('Order deleted successfully'); window.location.href='order_list.php';</script>";
         } else {
             echo "<script>alert('Order can only be deleted at least two days before the delivery date.'); window.location.href='view_orders.php';</script>";
         }
     } else {
-        echo "<script>alert('Order not found or does not belong to you.'); window.location.href='view_order.php';</script>";
+        echo "<script>alert('Order not found or does not belong to you.'); window.location.href='order_list.php';</script>";
     }
 } else {
-    echo "<script>alert('No order ID provided.'); window.location.href='view_order.php';</script>";
+    echo "<script>alert('No order ID provided.'); window.location.href='order_list.php';</script>";
 }
 ?>
