@@ -54,7 +54,7 @@ if (!$result_order_items) {
         }
     </style>
     <script>
-        function updateOrderStatus(orderID) {
+        function updateOrderStatus(orderID, salesManagerID, salesManagerName, salesManagerContact) {
             const status = document.getElementById('orderStatus').value;
 
             fetch('update_order_status.php', {
@@ -64,7 +64,10 @@ if (!$result_order_items) {
                 },
                 body: JSON.stringify({
                     orderID: orderID,
-                    status: status
+                    status: status,
+                    salesManagerID: salesManagerID,
+                    salesManagerName: salesManagerName,
+                    salesManagerContact: salesManagerContact
                 })
             })
             .then(response => response.json())
@@ -117,10 +120,13 @@ if (!$result_order_items) {
             <tr><th>Order Status</th>
                 <td>
                     <select id="orderStatus">
-                        <option value="accepted" <?= $order['orderStatus'] == 'accepted' ? 'selected' : '' ?>>Accepted</option>
-                        <option value="rejected" <?= $order['orderStatus'] == 'rejected' ? 'selected' : '' ?>>Rejected</option>
+                        <option value="Accepted" <?= $order['orderStatus'] == 'Accepted' ? 'selected' : '' ?>>Accepted</option>
+                        <option value="Rejected" <?= $order['orderStatus'] == 'Rejected' ? 'selected' : '' ?>>Rejected</option>
+                        <option value="Processing" <?= $order['orderStatus'] == 'Processing' ? 'selected' : '' ?>>Processing</option>
+                        <option value="Shipped" <?= $order['orderStatus'] == 'Shipped' ? 'selected' : '' ?>>Shipped</option>
+                        <option value="Delivered" <?= $order['orderStatus'] == 'Delivered' ? 'selected' : '' ?>>Delivered</option>
                     </select>
-                    <button type="button" onclick="updateOrderStatus(<?= $order['orderID'] ?>)">Update Status</button>
+                    <button type="button" onclick="updateOrderStatus('<?= $order['orderID'] ?>', '<?= $salesManagerID ?>', '<?= $order['salesManagerContactName'] ?>', '<?= $order['salesManagerContactNumber'] ?>')">Update Status</button>
                 </td>
             </tr>
         </table>
